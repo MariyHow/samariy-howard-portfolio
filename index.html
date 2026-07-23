@@ -133,6 +133,64 @@
         <img src="./assets/circle.svg" class="shape shape--7">
         <img src="./assets/semi circle.svg" class="shape shape--8">
     </section>
+    <section id="experience">
+        <div class="container">
+            <div class="row experience__row">
+                <div class="experience__heading">
+                    <p class="experience__eyebrow">Professional Journey</p>
+                    <h1 class="section__title">
+                        My <span class="gold">experience</span>
+                    </h1>
+                    <p class="experience__intro">
+                        Explore the roles that helped shape my experience in software development, technical education, artificial intelligence, data analytics, and leadership.
+                    </p>
+                </div>
+                <div class="experience__list">
+                    <article 
+                        class="experience__card" 
+                        tabindex="0" 
+                        role="button"
+                        aria-expanded="false" 
+                        onclick="toggleExperience(this)" 
+                        onkeydown="handleExperienceKey(event, this)">
+                        <div class="experience__card--front">
+                            <figure class="experience__logo--wrapper">
+                                <img src="./assets/netAmerica.png" alt="net.America logo" class="experience__logo">
+                            </figure>
+                            <div class="experience__summary">
+                                <p class="experience__company">
+                                    net.America / Turner Job Corps
+                                </p>
+                                <h2 class="experience__position">
+                                    IT Academy Instructor
+                                </h2>
+                                <p class="experience__category">
+                                    Technology Education · Leadership
+                                </p>
+                                <button class="experience__open" type="button" aria-label="View IT Academy Instructor details"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <div class="experience__details">
+                                <div class="experience__details--content">
+                                    <h3>Position</h3>
+                                    <p>Served as an IT Academy Instructor supporting a class of 28 learners preparing for careers in technology.</p>
+                                    <h3>Responsibilities</h3>
+                                    <p>Delivered instruction in computer science, Python, networking, cybersecurity, relational databases, software testing, data analysis, and workforce readiness.</p>
+                                    <p>Helped 27 of 28 learners complete the program while providing technical support, mentorship, curriculum planning, and hands-on project guidance.</p>
+                                    <div class="experience__skils">
+                                        <span>Python</span>
+                                        <span>SQL</span>
+                                        <span>Cybersecurity</span>
+                                        <span>Curriculum Design</span>
+                                        <span>Technical Support</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="projects">
         <div class="container">
             <div class="row">
@@ -142,23 +200,23 @@
                 <ul class="project__list">
                     <li class="project">
                         <div class="project__wrapper">
-                            <img src="/assets/blinker mockup.png" class="project__img" alt="">
+                            <img src="/assets/spasa-project.png" class="project__img" alt="">
                             <div class="project__wrapper--background"></div>
                             <div class="project__description">
                                 <h3 class="project__description--title">
-                                    Car Sales Projects
+                                    SPASA Project
                                 </h3>
                                 <h4 class="project__description--sub-title">
-                                    HTML, CSS, JavaScript, React, Python, SQL
+                                    React, JavaScript, NASA API, React Router, Local Storage
                                 </h4>
                                 <p class="project__description--para">
-                                    Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean.
+                                    A space exploration web application that allows users to search NASA's image collection, view detailed information, and save their favorite discoveries. SPASA uses reusable React components, dynamic routing, API requests, and local storage to create an interactive and responsive experience.
                                 </p>
                                  <div class="project__description--links">
-                                    <a href="https://www.github.com/MariyHow" target="_blank" class="project__description--link">
+                                    <a href="https://www.github.com/MariyHow/SPASA" target="_blank" class="project__description--link">
                                         <i class="fa-brands fa-github"></i>
                                     </a>
-                                    <a href="#" class="project__description--link">
+                                    <a href="https://spasa-one.vercel.app/" target="_blank" class="project__description--link">
                                         <i class="fas fa-link"></i>
                                     </a>
                                  </div>
@@ -167,23 +225,23 @@
                     </li>
                     <li class="project">
                         <div class="project__wrapper">
-                            <img src="/assets/blinker mockup.png" class="project__img" alt="">
+                            <img src="/assets/library-project.png" class="project__img" alt="">
                             <div class="project__wrapper--background"></div>
                             <div class="project__description">
                                 <h3 class="project__description--title">
-                                    Car Sales Projects
+                                    Library App
                                 </h3>
                                 <h4 class="project__description--sub-title">
-                                    HTML, CSS, JavaScript, React, Python, SQL
+                                    HTML, CSS, JavaScript, React, React Router
                                 </h4>
                                 <p class="project__description--para">
-                                    Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean.
+                                    A responsive React application that allows users to browse a digital collection of books and open individual book details. The project demonstrates reusable components, dynamic routing, responsive navigation, and organized application data.
                                 </p>
                                  <div class="project__description--links">
-                                    <a href="https://www.github.com/MariyHow" target="_blank" class="project__description--link">
+                                    <a href="https://www.github.com/MariyHow/library-react" target="_blank" class="project__description--link">
                                         <i class="fa-brands fa-github"></i>
                                     </a>
-                                    <a href="#" class="project__description--link">
+                                    <a href="https://library-react-ashy.vercel.app/" target="_blank" class="project__description--link">
                                         <i class="fas fa-link"></i>
                                     </a>
                                  </div>
@@ -192,24 +250,24 @@
                     </li>
                     <li class="project">
                         <div class="project__wrapper">
-                            <img src="/assets/blinker mockup.png" class="project__img" alt="">
+                            <img src="/assets/bionic-man-project.png" class="project__img" alt="">
                             <div class="project__wrapper--background"></div>
                             <div class="project__description">
                                 <h3 class="project__description--title">
-                                    Car Sales Projects
+                                    Bionic Man
                                 </h3>
                                 <h4 class="project__description--sub-title">
-                                    HTML, CSS, JavaScript, React, Python, SQL
+                                    GDevelop, Game Logic, Animation, Collision Systems
                                 </h4>
                                 <p class="project__description--para">
-                                    Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean.
+                                    A futuristic platform game inspired by classic action games. Bionic Man includes player movement, combat, animated character states, health management, enemy damage, collectible abilities, environmental hazards, and collions-based gameplay systems.
                                 </p>
                                  <div class="project__description--links">
                                     <a href="https://www.github.com/MariyHow" target="_blank" class="project__description--link">
                                         <i class="fa-brands fa-github"></i>
                                     </a>
-                                    <a href="#" class="project__description--link">
-                                        <i class="fas fa-link"></i>
+                                    <a href="https://gd.games/games/2a0f1aad-6024-465e-bb30-a3ba4bb8a253" target="_blank" class="project__description--link">
+                                        <i class="fas fa-gamepad"></i>
                                     </a>
                                  </div>
                             </div>
