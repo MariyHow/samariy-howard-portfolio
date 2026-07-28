@@ -49,3 +49,25 @@ function toggleModal() {
     // toggle modal
     document.body.classList += " modal--open"
 }
+
+function toggleExperience(selectedCard) {
+    const experienceCard = document.querySelectorAll(".experience__card")
+    const selectedCardIsOpen = selectedCard.classList.contains("experience__card--open")
+
+    experienceCard.forEach((card) => {
+        card.classList.remove("experience__card--open")
+        card.setAttribute("aria-expanded", "false")
+    })
+
+    if (!selectedCardIsOpen) {
+        selectedCard.classList.add("experience__card--open")
+        selectedCard.setAttribute("aria-expanded", "true")
+    }
+}
+
+function handleExperienceKey(event, selectedCard) {
+    if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault()
+        toggleExperience(selectedCard)
+    }
+}
