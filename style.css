@@ -417,6 +417,7 @@ nav {
 .experience__details {
     display: grid;
     grid-template-rows: 0fr;
+    grid-column: 1 / -1;
     background-color: #242424;
     color: #ffffff;
     transition: grid-template-rows 450ms ease;
@@ -473,7 +474,7 @@ nav {
     grid-template-rows: 1fr;
 }
 
-.experience__card--open, .experience__open {
+.experience__card--open .experience__open {
     transform: rotate(45deg);
     background-color: #cfaa5c;
 }
@@ -878,6 +879,18 @@ width = 80vw
     .header__para {
         font-size: 20px;
     }
+    .experience__list {
+        grid-template-columns: 1fr;
+    }
+    .experience__heading {
+        padding: 0 20px;
+    }
+    .experience__intro {
+        font-size: 16px;
+    }
+    .project__img {
+        height: 400px;
+    }
     .modal {
         top: 0;
         left: 0;
@@ -889,9 +902,6 @@ width = 80vw
     .modal__half {
         width: 100%;
     }
-    .project__img {
-        height: 400px;
-    }
 }
 
 /* Small phones */
@@ -899,11 +909,35 @@ width = 80vw
     .title {
         font-size: 52px;
     }
+    .nav__link:first-child {
+        display: none;
+    }
     .header__para {
         font-size: 18px;
     }
-    .nav__link:first-child {
-        display: none;
+    .experience__card--front {
+        grid-template-columns: 70px 1fr 36px;
+        gap: 14px;
+        min-height: 160px;
+        padding: 20px;
+    }
+    .experience__logo--wrapper {
+        width: 70px;
+        height: 70px;
+    }
+    .experience__position {
+        font-size: 19px;
+    }
+    .experience__company, .experience__category {
+        font-size: 12px;
+    }
+    .experience__open {
+        width: 36px;
+        height: 36px;
+    }
+    .experience__details--content > * {
+        margin-left: 20px;
+        margin-right: 20px;
     }
     .project__description--para {
         display: none;
