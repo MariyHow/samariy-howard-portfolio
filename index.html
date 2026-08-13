@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="imgage/png" href="./assets/SH_blue_logo.png" />
+    <link rel="icon" type="imgage/png" href="./assets/SH_blue_logo.png" />
     <title>Samariy Howard</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c612b1dcec.js" crossorigin="anonymous"></script>
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
     <script type="text/javascript">
         (function(){
             emailjs.init({
@@ -23,7 +23,9 @@
     <section id="landing__page" onmousemove="moveBackground(event)">
         <nav>
             <figure class="click">
-                <img href="#" id="personal__logo" src="./assets/SH_blue_logo.png" alt="">
+                <a href="#landing__page" id="click">
+                    <img src="./assets/SH_blue_logo.png" alt="Samariy Howard home" id="personal__logo">
+                </a>
             </figure>
             <ul class="nav__link--list">
                 <li class="nav__link" onclick="toggleModal()">
@@ -47,7 +49,7 @@
             <div class="header__content">
                 <h1 class="title">Hey</h1>
                 <h1 class="title gold">I'm Samariy</h1>
-                <p class="header__para">I'm a <b class="gold">Frontend Software Engineer</b> with a strong passion for building web applications with great user experiences. </br>Here's a bit more <b class="gold click" onclick="toggleModal()">about me</b>.</p>
+                <p class="header__para">I'm a <b class="gold">Frontend Software Engineer</b> with a strong passion for building web applications with great user experiences. <br>Here's a bit more <b class="gold click" onclick="toggleModal()">about me</b>.</p>
                 <div class="social__list">
                     <a href="https://www.linkedin.com/in/sh27/" target="_blank" class="social__link click"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="https://www.github.com/MariyHow" target="_blank" class="social__link click"><i class="fa-brands fa-github"></i></a>
@@ -112,7 +114,7 @@
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Email</label>
-                        <input type="email" class="input" name="user_email" placeholder="Enter your email" required></input>
+                        <input type="email" class="input" name="user_email" placeholder="Enter your email" required>
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Message</label>
@@ -149,130 +151,150 @@
                         Explore the roles that helped shape my experience in software development, technical education, artificial intelligence, data analytics, and leadership.
                     </p>
                 </div>
-                <div class="experience__list">
-                    <article 
-                        class="experience__card" 
-                        tabindex="0" 
-                        role="button"
-                        aria-expanded="false" 
-                        onclick="toggleExperience(this)" 
-                        onkeydown="handleExperienceKey(event, this)">
-                        <div class="experience__card--front">
-                            <figure class="experience__logo--wrapper">
-                                <img src="./assets/netAmerica.png" alt="net.America logo" class="experience__logo">
-                            </figure>
-                            <div class="experience__summary">
-                                <p class="experience__company">
-                                    net.America / Turner Job Corps
-                                </p>
-                                <h2 class="experience__position">
-                                    IT Academy Instructor
-                                </h2>
-                                <p class="experience__category">
-                                    Technology Education · Leadership
-                                </p>
-                            </div>
-                            <button class="experience__open" type="button" aria-label="View IT Academy Instructor details" tabindex="-1"><i class="fas fa-plus"></i></button>
-                            <div class="experience__details">
-                                <div class="experience__details--content">
-                                    <h3>Position</h3>
-                                    <p>Served as an IT Academy Instructor supporting a class of 28 learners preparing for careers in technology.</p>
-                                    <h3>Responsibilities</h3>
-                                    <p>Delivered instruction in computer science, Python, networking, cybersecurity, relational databases, software testing, data analysis, and workforce readiness.</p>
-                                    <p>Helped 27 of 28 learners complete the program while providing technical support, mentorship, curriculum planning, and hands-on project guidance.</p>
-                                    <div class="experience__skills">
-                                        <span>Python</span>
-                                        <span>SQL</span>
-                                        <span>Cybersecurity</span>
-                                        <span>Curriculum Design</span>
-                                        <span>Technical Support</span>
+                <div class="experience__carousel">
+                    <button 
+                        class="experience__nav experience__nav--left" 
+                        type="button" 
+                        aria-label="Previous experience" 
+                        onclick="moveExperience(-1)"
+                    >
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="experience__stage">
+                        <div class="experience__list">
+                            <article 
+                                class="experience__card" 
+                                tabindex="0" 
+                                role="button"
+                                aria-expanded="false" 
+                                onclick="toggleExperience(this)" 
+                                onkeydown="handleExperienceKey(event, this)">
+                                <div class="experience__card--front">
+                                    <figure class="experience__logo--wrapper">
+                                        <img src="./assets/netAmerica.png" alt="net.America logo" class="experience__logo">
+                                    </figure>
+                                    <div class="experience__summary">
+                                        <p class="experience__company">
+                                            net.America / Turner Job Corps
+                                        </p>
+                                        <h2 class="experience__position">
+                                            IT Academy Instructor
+                                        </h2>
+                                        <p class="experience__category">
+                                            Technology Education · Leadership
+                                        </p>
+                                    </div>
+                                    <button class="experience__open" type="button" aria-label="View IT Academy Instructor details" tabindex="-1"><i class="fas fa-plus"></i></button>
+                                    <div class="experience__details">
+                                        <div class="experience__details--content">
+                                            <h3>Position</h3>
+                                            <p>Served as an IT Academy Instructor supporting a class of 28 learners preparing for careers in technology.</p>
+                                            <h3>Responsibilities</h3>
+                                            <p>Delivered instruction in computer science, Python, networking, cybersecurity, relational databases, software testing, data analysis, and workforce readiness.</p>
+                                            <p>Helped 27 of 28 learners complete the program while providing technical support, mentorship, curriculum planning, and hands-on project guidance.</p>
+                                            <div class="experience__skills">
+                                                <span>Python</span>
+                                                <span>SQL</span>
+                                                <span>Cybersecurity</span>
+                                                <span>Curriculum Design</span>
+                                                <span>Technical Support</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article 
-                        class="experience__card" 
-                        tabindex="0" 
-                        role="button"
-                        aria-expanded="false" 
-                        onclick="toggleExperience(this)" 
-                        onkeydown="handleExperienceKey(event, this)">
-                        <div class="experience__card--front">
-                            <figure class="experience__logo--wrapper">
-                                <img src="./assets/IBM_SkillsBuild.jpg" alt="net.America logo" class="experience__logo">
-                            </figure>
-                            <div class="experience__summary">
-                                <p class="experience__company">
-                                    IBM SkillsBuild
-                                </p>
-                                <h2 class="experience__position">
-                                    IBM Student Ambassador
-                                </h2>
-                                <p class="experience__category">
-                                    Technology Advocacy · Community Leadership
-                                </p>
-                            </div>
-                            <button class="experience__open" type="button" aria-label="View IT Academy Instructor details" tabindex="-1"><i class="fas fa-plus"></i></button>
-                            <div class="experience__details">
-                                <div class="experience__details--content">
-                                    <h3>Position</h3>
-                                    <p>Represented IBM SkillsBuild as a student ambassador at Albany State University.</p>
-                                    <h3>Responsibilities</h3>
-                                    <p>Hosted technical webinars, promoted IBM digital credentials, supported students pursuing technology skills, and helped secure university support for the SkillsBuild program.</p>
-                                    <h3>Experience</h3>
-                                    <p>Strengthened public speaking, technology advocacy, event coordination, professional communication, and community engagement skills.</p>
-                                    <div class="experience__skills">
-                                        <span>Public Speaking</span>
-                                        <span>Leadership</span>
-                                        <span>Technology Advocacy</span>
-                                        <span>Event Coordination</span>
+                            </article>
+                            <article 
+                                class="experience__card" 
+                                tabindex="0" 
+                                role="button"
+                                aria-expanded="false" 
+                                onclick="toggleExperience(this)" 
+                                onkeydown="handleExperienceKey(event, this)">
+                                <div class="experience__card--front">
+                                    <figure class="experience__logo--wrapper">
+                                        <img src="./assets/IBM_SkillsBuild.jpg" alt="net.America logo" class="experience__logo">
+                                    </figure>
+                                    <div class="experience__summary">
+                                        <p class="experience__company">
+                                            IBM SkillsBuild
+                                        </p>
+                                        <h2 class="experience__position">
+                                            IBM Student Ambassador
+                                        </h2>
+                                        <p class="experience__category">
+                                            Technology Advocacy · Community Leadership
+                                        </p>
+                                    </div>
+                                    <button class="experience__open" type="button" aria-label="View IT Academy Instructor details" tabindex="-1"><i class="fas fa-plus"></i></button>
+                                    <div class="experience__details">
+                                        <div class="experience__details--content">
+                                            <h3>Position</h3>
+                                            <p>Represented IBM SkillsBuild as a student ambassador at Albany State University.</p>
+                                            <h3>Responsibilities</h3>
+                                            <p>Hosted technical webinars, promoted IBM digital credentials, supported students pursuing technology skills, and helped secure university support for the SkillsBuild program.</p>
+                                            <h3>Experience</h3>
+                                            <p>Strengthened public speaking, technology advocacy, event coordination, professional communication, and community engagement skills.</p>
+                                            <div class="experience__skills">
+                                                <span>Public Speaking</span>
+                                                <span>Leadership</span>
+                                                <span>Technology Advocacy</span>
+                                                <span>Event Coordination</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article 
-                        class="experience__card" 
-                        tabindex="0" 
-                        role="button"
-                        aria-expanded="false" 
-                        onclick="toggleExperience(this)" 
-                        onkeydown="handleExperienceKey(event, this)">
-                        <div class="experience__card--front">
-                            <figure class="experience__logo--wrapper">
-                                <img src="./assets/Step-up-for-students.png" alt="net.America logo" class="experience__logo">
-                            </figure>
-                            <div class="experience__summary">
-                                <p class="experience__company">
-                                    Step Up Jacksonville
-                                </p>
-                                <h2 class="experience__position">
-                                    Remote Math Instructor
-                                </h2>
-                                <p class="experience__category">
-                                    Mathematics · Student Development
-                                </p>
-                            </div>
-                            <button class="experience__open" type="button" aria-label="View IT Academy Instructor details" tabindex="-1"><i class="fas fa-plus"></i></button>
-                            <div class="experience__details">
-                                <div class="experience__details--content">
-                                    <h3>Position</h3>
-                                    <p>Provided remote mathematics instruction for third and fourth grade students.</p>
-                                    <h3>Responsibilities</h3>
-                                    <p>Explained mathematical concepts, encouraged student participation, adapted lessons to different learning needs, and supported confidence-building.</p>
-                                    <h3>Experience</h3>
-                                    <p>Developed stronger communication, patience, lesson facilitation, and remote classroom management skills.</p>
-                                    <div class="experience__skills">
-                                        <span>Instruction</span>
-                                        <span>Communication</span>
-                                        <span>Mentorship</span>
-                                        <span>Remote Learning</span>
+                            </article>
+                            <article 
+                                class="experience__card" 
+                                tabindex="0" 
+                                role="button"
+                                aria-expanded="false" 
+                                onclick="toggleExperience(this)" 
+                                onkeydown="handleExperienceKey(event, this)">
+                                <div class="experience__card--front">
+                                    <figure class="experience__logo--wrapper">
+                                        <img src="./assets/Step-up-for-students.png" alt="net.America logo" class="experience__logo">
+                                    </figure>
+                                    <div class="experience__summary">
+                                        <p class="experience__company">
+                                            Step Up Jacksonville
+                                        </p>
+                                        <h2 class="experience__position">
+                                            Remote Math Instructor
+                                        </h2>
+                                        <p class="experience__category">
+                                            Mathematics · Student Development
+                                        </p>
+                                    </div>
+                                    <button class="experience__open" type="button" aria-label="View IT Academy Instructor details" tabindex="-1"><i class="fas fa-plus"></i></button>
+                                    <div class="experience__details">
+                                        <div class="experience__details--content">
+                                            <h3>Position</h3>
+                                            <p>Provided remote mathematics instruction for third and fourth grade students.</p>
+                                            <h3>Responsibilities</h3>
+                                            <p>Explained mathematical concepts, encouraged student participation, adapted lessons to different learning needs, and supported confidence-building.</p>
+                                            <h3>Experience</h3>
+                                            <p>Developed stronger communication, patience, lesson facilitation, and remote classroom management skills.</p>
+                                            <div class="experience__skills">
+                                                <span>Instruction</span>
+                                                <span>Communication</span>
+                                                <span>Mentorship</span>
+                                                <span>Remote Learning</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
-                    </article>
+                    </div>
+                    <button
+                        class="experience__nav experience__nav--right"
+                        type="button"
+                        aria-label="Next experience"
+                        onclick="moveExperience(1)"
+                    >
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
