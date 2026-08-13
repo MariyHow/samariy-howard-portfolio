@@ -166,6 +166,20 @@ function moveExperience(direction) {
     updateExperienceCarousel()
 }
 
+document.addEventListener("keydown", (event) => {
+    const experienceSection = document.querySelector("#experience")
+    if (!experienceSection) return
+    const rect = experienceSection.getBoundingClientRect()
+    const experienceIsVisible = rect.top < window.innerHeight && rect.bottom > 0
+    if (!experienceIsVisible) return
+    if (event.key === "ArrowLeft") {
+        moveExperience(-1)
+    }
+    if (event.key === "ArrowRight") {
+        moveExperience(1)
+    }
+})
+
 function selectExperience(index) {
     if (index === activeExperienceIndex) {
         return

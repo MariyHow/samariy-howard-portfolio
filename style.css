@@ -374,7 +374,7 @@ nav {
 .experience__stage::before {
     content: "";
     position: absolute;
-    left: 29%;
+    left: 30%;
     bottom: 48px;
     width: 44%;
     height: 65px;
@@ -1033,6 +1033,38 @@ width = 80vw
     .modal__half {
         width: 100%;
     }
+    .experience__carousel {
+        gap: 10px;
+    }
+    .experience__stage {
+        max-width: 100%;
+        min-height: 440px;
+    }
+    .experience__card {
+        width: min(88vw, 500px);
+    }
+    .experience__card--previous {
+        transform:
+            translateX(-50%)
+            translateX(-260px)
+            translateY(45px)
+            translateZ(-320px)
+            rotateY(32deg)
+            scale(0.78);
+    }
+    .experience__card--next {
+        transform:
+            translateX(-50%)
+            translateX(260px)
+            translateY(45px)
+            translateZ(-320px)
+            rotateY(-32deg)
+            scale(0.78); 
+    }
+    .experience__nav {
+        width: 46px;
+        height: 46px;
+    }
 }
 
 /* Small phones */
@@ -1088,5 +1120,40 @@ width = 80vw
     }
     .modal__half {
         padding: 40px;
+    }
+    .experience__carousel {
+    position: relative;
+    display: block;
+    }
+    .experience__stage {
+        min-height: 460px;
+    }
+    .experience__card {
+        width: calc(100vw - 60px);
+        max-width: 380px;
+    }
+    .experience__card--previous,
+    .experience__card--next {
+        opacity: 0;
+        pointer-events: none;
+    }
+    .experience__nav {
+        position: absolute;
+        top: 180px;
+
+        width: 42px;
+        height: 42px;
+
+        z-index: 20;
+    }
+    .experience__nav--left {
+        left: 6px;
+    }
+    .experience__nav--right {
+        right: 6px;
+    }
+    .experience__stage::before,
+    .experience__stage::after {
+        display: none;
     }
 }
